@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    
+}
+ 
+ul,ol{
+    list-style: none;
+}
+image{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+h2{
+    padding-top: 50px;
+    /*padding-bottom:50px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+h3{
+    padding-top: 30px;
+    padding-left: 150px;
+}
+h4{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+/*menu*/
+.bar{
+    background:#2c3e50;
+    width:100%;
+    height: 50px;
+    position:fixed;
+    z-index:1; 
+}
+#menu {
+            position: fixed;
+            top: 10px;
+            left: 20%;
+            margin-left: 400px;
+            width: 900px;
+            height:50px;
+        }
+
+        #menu ul li a {
+            display: block;
+            margin: 5px 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            height: 50px;           
+            text-decoration: none;
+            text-align: center;
+            float:left;
+            padding:5px 30px;             
+            width:150px;
+        }
+
+        #menu ul li a:hover,
+        #menu ul li a.current {
+            color: #FFA500;
+            /*background:rgb(255,255,255,1);*/
+        }
+        * html #menu {
+            position: absolute;
+            bottom: auto;
+           
+        }
+
+/*section summary*/
+section.summary{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent url("../image/bgimage.jpg") ;
+   
+}
+ section.summary img.avatar{
+       width:128px;
+       height:128px;
+       border-radius:50%;
+    }
+section.summary .info{
+    padding-top: 30px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 900;
+    padding-bottom:20px;
+    
+}
+
+section.summary .text{
+    padding-top: 30px;
+    line-height: 1.5;
+    text-align: center;
+    /*display: none;*/
+    
+}
+/*section.experience*/
+section.experience{
+    height: 100vh;
+    background: rgb(244,244,244);
+  
+      
+}
+@media (max-width:960px){
+    section.experience{
+        height: auto;
+        min-height: 100hv;
+    }
+     section.experience .date-box{
+       width: 100px!important;
+       height: 100px!important;
+    }
+    section.experience .date-box p{
+        font-size: 10px;
+        /*line-height: 5px;*/
+    }
+   
+   section.experience .my-xp .my-xp-box{
+      
+        margin-top: 110px;
+        width: 75%;
+    }
+    section.experience .my-school p, section.experience .my-school strong,section.experience .my-work p, section.experience .my-work strong{
+    font-size: 14px;
+    line-height: 1;
+   
+}
+    section.experience .my-xp li:not(:first-child){
+        margin-top: 20px;
+    }
+
+  
+}
+section.experience .my-xp{
+     overflow: hidden;
+     margin-bottom:0;
+     padding: 10px 10px 3px;
+   
+}
+
+section.experience .my-xp li{
+    position: relative;
+    overflow: hidden;
+    
+}
+section.experience .date-box{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #FFA500;
+    /*background: #fff;*/
+    border-radius:  50%;
+    padding-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -75px;
+}
+section.experience .my-work{
+    width: 40%;
+    text-align: right;
+    
+}
+section.experience .my-xp strong{
+
+    font-size: 20px;
+}
+section.experience .my-work p{
+    text-align: right;
+       
+}
+section.experience .my-xp p.ptitle{
+    /*margin: 0.5em 0;*/
+    color: #FFA500;
+}
+section.experience .date-box p{
+    text-align: center; 
+    font-weight: 600;
+    line-height: 30px;
+}
+
+section.experience .my-school{
+    width: 40%;
+    float: right;
+}
+section.experience .my-school p, section.experience .my-school strong{
+    text-align: left;
+    display: block;
+    
+}
+section.experience .my-xp li >div{
+    height: 150px;
+}
+section.experience .my-xp li:not(:first-child){
+    margin-top: 50px;
+}
+section.experience .my-xp li >div:last-child{
+    padding: 1em 0 0;
+}
+
+/*section.works*/
+section.works{
+    height: 100vh;
+    background: transparent url("../image/bgimage.jpg"); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:420px){
+    section.works{
+        height: auto;
+        min-height: 100hv;
+    }
+  
+}
+section.works img{
+ max-width: 200px;
+ 
+}
+
+section.works p{
+padding-bottom:20px;
+ 
+}
+section.works .imageWraper{
+  padding: 10px 10px 3px;
+   background: white;
+   text-align: right;
+   /*position:relative;
+   text-decoration:none*/
+}
+section.works .imageWraper1{
+  /*padding: 10px 10px 3px;*/
+   background: transparent url("../image/works6.png"); ;
+   text-align: right;
+   /*position:relative;
+   text-decoration:none*/
+}
+section.works span{
+display: none;
+ 
+}
+section.works img:hover {
+    transform: scale(1.2);
+    filter:alpha(Opacity=60);
+    -moz-opacity:0.6;
+    opacity: 0.6;
+    /*cursor:pointer;*/
+    /*display:block;*/
+    /*position:absolute;*/
+    
+}
+
+section.works > ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+}
+@media (max-width:420px){
+    section.works{
+        padding: 1em;
+    }
+    section.works > ul{
+       justify-content: center;
+    }
+  
+}
+section.works > ul h3{
+   font-size: 16px;
+   font-weight: normal;
+   padding-left: 10px;
+   margin: 8px 0;
+}
+
+/*section skills*/
+section.skills{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(244,244,244);   
+}
+@media (max-width:420px){
+    section.skills{
+        height: auto;
+        min-height: 100hv;
+    }
+  
+}
+section.skills img{
+width:150px;
+height:150px;
+margin-left: 30px;
+/*border-radius:50%;*/
+}
+
+section.skills > ul{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: space-between;
+}
+section.skills .introduction{
+    padding-top:10px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    display: none;
+}
+@media (max-width:420px){
+    section.skills{
+        padding: 1em;
+    }
+    section.skills > ul{
+       justify-content: center;
+    }
+  
+}
+
+/*section honor*/
+section.honor{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    background: transparent url("../image/bgimage.jpg");
+   
+}
+.school{
+    border: 1px solid gray;
+    width:800px;
+    height:420px;
+    background: white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    margin-top:20px;
+
+}
+.panes{
+    padding-left: 150px;
+    display: none;
+}
+@media (max-width:420px){
+    section.honor{
+        height: auto;
+        min-height: 100hv;
+    }
+  
+}
