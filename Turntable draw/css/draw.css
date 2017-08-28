@@ -1,0 +1,196 @@
+@charset "utf-8";
+/*base*/
+*,  
+::after,  
+::before{  
+  margin: 0;  
+  padding: 0;  
+  /*当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色*/  
+  -webkit-tap-highlight-color: transparent;  
+  /*设置所有是以边框开始计算宽度  百分比*/  
+  -webkit-box-sizing:border-box;  
+  box-sizing: border-box;  
+}  
+html {
+    font-size : 30px;
+    height: 100%; 
+    width: 100%;
+    font-family: "Microsoft YaHei" ! important;
+}
+
+body{
+    -webkit-overflow-scrolling:touch;
+    /* min-width:11.3rem;   */
+    height: 100%; 
+    margin: 0;
+     -webkit-tap-highlight-color: transparent;  
+  /*设置所有是以边框开始计算宽度  百分比*/  
+  -webkit-box-sizing:border-box;  
+  box-sizing: border-box;  
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+}
+a, img {
+    -webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+a{  
+    color: #333;  
+    text-decoration: none;  
+}  
+a:hover{  
+    text-decoration: none;  
+}  
+input{  
+    border: none;  
+    outline: none;  
+    /*清除移动端默认的表单样式*/  
+    -webkit-appearance:none;  
+}  
+li{  
+    list-style: none;  
+}
+
+h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .2rem;
+   
+}  
+h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .2rem; 
+   
+} 
+
+
+/*抽奖页面*/
+ .container{
+    width:100%; 
+    height: 100%;  
+   overflow-x: hidden;
+}
+/*头部样式*/
+.header{
+    height: 4rem;
+    background: white;
+    position: fixed; 
+    z-index: 1; 
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    /* background-size: 100% 100%; */
+}
+
+.back_icon img{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left:20px;  
+    top:15px; 
+}
+.index_icon img{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right:20px;  
+    top:15px; 
+}
+.bgimg{
+    width:100%; 
+    height:15.9rem;  
+    margin-top:4rem;
+    
+}
+/* 大转盘样式 */
+.main{
+    width:100%;
+}
+.banner{
+    display:block;
+    width:95%;
+    margin:0 auto;
+    padding-top:5px;
+   padding-bottom: 20px;
+}
+.banner .turnplate{
+    display:block;
+    width:100%;
+    position:relative;
+}
+.banner .turnplate canvas.item{
+    width:100%;
+}
+.banner .turnplate img.pointer{
+    position:absolute;
+    width:60%;
+    height:62%;
+    left:18%;
+    top:16%;
+}
+.mengceng{
+    display: none;  
+    width:100%;
+    height:100%;
+    position: fixed;
+    bottom:0;
+    background: black;
+    z-index:1;
+    filter: Alpha(Opacity=10, Style=0);
+    opacity: 0.50; 
+    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+
+.prize1,.prize2,.prize3,.prize4,.prize5,.prize6{
+   z-index:2;
+   position: fixed; 
+   display: none;   
+   width:20rem;
+   height:23rem;
+   top: 13rem;
+   left:2.5rem;
+   -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+   -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+   transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.button1 img,.button2 img,.button3 img,.button4 img,.button5 img,.button6 img{
+    width: 8rem;
+    height: 3rem;
+    position: relative;
+    top:15rem;
+    left:6rem;
+    
+}   
+.colse1 img,.colse2 img,.colse3 img,.colse4 img,.colse5 img,.colse6 img{
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top:-0.5rem;
+    left:18.5rem;
+}
+.aa{
+    color:white;
+    position: relative;
+    top:16rem;
+    left:6.5rem;
+    font-size: 1.2rem;
+}
+.aa a{
+    color:white;
+    text-decoration:underline;
+}
+
+
+
+
+
