@@ -1,0 +1,350 @@
+@charset "utf-8";
+/*base*/
+*,  
+::after,  
+::before{  
+  margin: 0;  
+  padding: 0;  
+  /*当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色*/  
+  -webkit-tap-highlight-color: transparent;  
+  /*设置所有是以边框开始计算宽度  百分比*/  
+  -webkit-box-sizing:border-box;  
+  box-sizing: border-box;  
+}  
+html {
+    font-size : 30px;
+    height: 100%; 
+    width: 100%;
+    font-family: "黑体" ! important;
+    line-height: 1.2rem;
+}
+
+body{
+    -webkit-overflow-scrolling:touch;
+    /* min-width:11.3rem;   */
+    height: 100%; 
+    margin: 0;
+    box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+}
+a, img {
+    -webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+a{  
+    color: #333;  
+    text-decoration: none;  
+}  
+a:hover{  
+    text-decoration: none;  
+}  
+input{  
+    border: none;  
+    outline: none;  
+    /*清除移动端默认的表单样式*/  
+    -webkit-appearance:none;  
+}  
+li{  
+    list-style: none;  
+}
+
+h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .2rem;
+   
+}  
+h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .2rem; 
+   
+} 
+/*主页面*/
+.layout{  
+    width: 100%;   
+    height: 100%;
+} 
+ .share img{
+    width:5rem;
+    height: 3rem;
+    position: fixed;
+    top:80px;
+    right:0;
+    z-index: 100;
+} 
+ .logo {
+   width:100%;
+   height:30rem;
+} 
+ .logo img{
+ width:100%;
+ height:30rem;
+ max-width:100%;
+ max-height:100%;
+}   
+ .drawDiv img{
+    width:5rem;
+    height: 4.5rem;
+    position: fixed;
+    top:10rem;
+    left:2rem;
+    z-index: 100;
+} 
+
+/*投票区*/
+.vote{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background:rgb(188,240,255);  
+}
+.vote-title{
+    z-index:2;
+    height: 3rem;
+}
+.vote-title img{
+    max-width: 16rem;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: .7rem;  
+    margin:-0.7rem .7rem .7rem .7rem ;  
+    padding-top:2rem;
+      box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+}
+
+.display > ul{
+    display: flex;
+    flex:2;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   
+}
+@media(max-width:300px){
+    .display>ul{
+        justify-content: center;
+    }
+}
+.display img{
+ width:auto;
+ max-width: 10.5rem;
+ /* border-radius:.5rem;  */
+}
+.imageWraper{
+  padding: .2rem;  
+  margin: .2rem; 
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.imageWraper p{
+    padding-top: .4rem;
+    color:rgb(65,99,149);
+    font-size: 1rem;
+     line-height: 1.2rem;
+}
+.count{
+   
+    margin-top:-.3rem;
+    
+
+}
+.schoolname{
+   height:2rem;
+   font-weight: bold;
+   font-size: 1.2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   color:rgb(65,99,149);
+}
+.imageWraper button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(66,234,161);
+    width:10.5rem;
+    height:3rem;
+    color: white;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    margin:.4rem .2rem;
+    border:0;
+    outline:none;
+}
+.imageWraper p >span{
+    color:rgb(137,112,255);
+    font-weight: bold;
+    
+}
+#flg1,#flg2,#flg3,#flg4,#flg5,#flg6,#flg7,#flg8,#flg9,#flg10,#flg11,#flg12,#flg13,#flg14,#flg15,#flg16,#flg17,#flg18{
+    display: none;
+}
+
+/*活动简介*/
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgb(188,240,255);  
+    padding-top:1rem;  
+}
+.info_div{
+    background: white;
+    border-radius: .7rem;  
+    margin:-0.7rem .7rem .7rem .7rem;  
+    padding-bottom:.7rem;
+}
+.info-title{
+    z-index:2;
+    height: 3rem;
+}
+.info-title img{
+    max-width: 16rem;
+}
+
+.info_div p{
+    /* list-style: circle; */
+    line-height: 1.8rem;
+    font-size: 1.3rem;
+    padding: 0 1rem 0 2.5rem;
+    color:rgb(65,99,149);
+     font-size: 1rem;
+    
+   
+   
+}
+.info_div p >span{
+    color:rgb(137,112,255);
+     font-weight: bold;
+  
+}
+.circle{
+    width:.7rem;
+    height:.7rem;
+    background:rgb(137,112,255);
+    position: relative;
+    top: 1.25rem;
+    left: 1.2rem;
+    border-radius: 0.35rem;
+}
+
+/*留言*/
+.words{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgb(188,240,255);  
+    padding-top:2rem;  
+}
+.words-title{
+    z-index:2;
+    height: 3rem;
+    margin-bottom: -1.5rem;
+}
+.words-title img{
+    max-width: 16rem;
+}
+.words_div{
+    background: white;
+    border-radius: .7rem;  
+    margin: .7rem;  
+    padding-bottom:.7rem;
+    height:18rem;
+    width:95%;
+}
+.content{
+    border:1px solid #00a3cf;
+    margin:2rem .7rem;
+    height:10rem;
+    border-radius: .5rem;
+
+}
+.content textarea{
+    width:100%;
+    height:100%;
+     resize:none; 
+    font-size: 1.1rem;
+     border:0; 
+     border-radius: .5rem;
+     padding:.5rem;
+}
+.submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(66,234,161);
+    width:10rem;
+    height:3rem;
+    color: white;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    margin-left:30%;
+}
+/*留言列表*/
+#commentlist{
+    margin:1rem ;
+    width:100%;
+}
+.comment {
+  position: relative;
+  border-bottom: 2px solid lightgray;
+  padding: 1rem;
+  min-height: 3rem;
+  width:100%;
+}
+.comment-user {
+  color: #00a3cf;
+  font-style: italic;
+}
+
+ .comment-time {
+  padding-right: .3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.comment-index{
+    color: gray;
+}
+#load-more{
+    color: gray;
+    text-align: center;
+    margin-bottom:1rem;
+    display: none;
+}
+#bottom{
+    color: gray;
+    text-align: center;
+    margin-bottom:1rem;
+    display: none;
+}
+
+
+
+
