@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web 留言板</title>
+    <script type="text/javascript" src='words.js'></script>
+</head>
+<body onload="init();">
+    <h1>使用数据库实现web留言板</h1>
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>留言:</td>
+            <td><input type="text" id="memo"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="提交" onclick="saveData();"></td>
+        </tr>
+    </table>
+    <hr>
+    <table id="datatable"></table>
+    <p id="msg"></p>
+</body>
+</html>
